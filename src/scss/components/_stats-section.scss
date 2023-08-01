@@ -1,0 +1,46 @@
+.stats-section {
+  padding: 150px 0;
+  &__title {
+    margin-bottom: 45px;
+  }
+  &__btns {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 120px;
+  }
+}
+.stats-table {
+  &__header {
+    position: relative;
+    color: #1A202C !important;
+    cursor: pointer;
+    &::after {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      height: 1px;
+      width: 0%;
+      background-color: currentColor;
+      transition: width .3s ease-in;
+    }
+    &::before {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-image: url('../img/sort.svg');
+      background-position: center, center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    @include hover {
+      &::after {
+        width: 100%;
+      }
+    }
+  }
+}

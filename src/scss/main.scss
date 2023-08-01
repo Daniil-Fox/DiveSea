@@ -1,0 +1,32 @@
+// базовые подключения
+@import "vars";
+@import "mixins";
+@import "fonts";
+@import "settings";
+
+// подключения компонентов страницы
+@import "./components/header";
+@import "./components/nav";
+@import "./components/form";
+@import "./components/hero";
+@import "./components/card";
+@import "./components/recent";
+@import "./components/weekly";
+@import "./components/collection";
+@import "./components/marketplace";
+@import "./components/benefits";
+@import "./components/raiting";
+@import "./components/newbid";
+@import "./components/cta";
+@import "./components/footer";
+@import "./components/join";
+@import "./components/faq";
+@import "./components/discover";
+@import "./components/input-file";
+@import "./components/detail-section";
+@import "./components/detail-modal";
+@import "./components/sell";
+@import "./components/stats-section";
+@import "./components/creators-section";
+@import "./components/creator-details";
+@import "./components/wallet-section";

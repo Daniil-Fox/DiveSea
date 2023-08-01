@@ -1,0 +1,272 @@
+html {
+  box-sizing: border-box;
+}
+body, html {
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+.page {
+  height: 100%;
+  font-family: var(--font-family, sans-serif);
+  -webkit-text-size-adjust: 100%;
+}
+
+.page__body {
+  margin: 0;
+  min-width: 320px;
+  min-height: 100%;
+  font-size: 16px;
+}
+
+img {
+  height: auto;
+  max-width: 100%;
+  object-fit: cover;
+}
+
+a {
+  text-decoration: none;
+}
+
+.site-container {
+  overflow: hidden; // если используете на сайте position: sticky - уберите эту настройку
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+.main {
+  flex: 1 1 auto;
+}
+.is-hidden {
+  display: none !important; /* stylelint-disable-line declaration-no-important */
+}
+
+.btn-reset {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.list-reset {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.input-reset {
+  -webkit-appearance: none;
+  appearance: none;
+  border: none;
+  border-radius: 0;
+  background-color: #fff;
+
+  &::-webkit-search-decoration,
+  &::-webkit-search-cancel-button,
+  &::-webkit-search-results-button,
+  &::-webkit-search-results-decoration {
+    display: none;
+  }
+}
+
+.visually-hidden {
+  position: absolute;
+  overflow: hidden;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  width: 1px;
+  height: 1px;
+  clip: rect(0 0 0 0);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 var(--container-offset);
+  max-width: var(--container-width);
+}
+
+.js-focus-visible :focus:not(.focus-visible) {
+  outline: none;
+}
+
+.centered {
+  text-align: center;
+}
+
+.dis-scroll {
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  overscroll-behavior: none;
+}
+
+.page--ios .dis-scroll {
+  position: relative;
+}
+
+.logo {
+  width: 53px;
+  height: 53px;
+}
+.btn {
+  position: relative;
+  z-index: 10;
+  padding: 16.17px 24.26px;
+  border-radius: 20px;
+  display: inline-block;
+
+  font-family: "Inter";
+  font-size: 16.172px;
+  font-weight: 600;
+  line-height: 150%;
+  text-transform: uppercase;
+  &--fill {
+    background-color: #141416;
+    border: 1px solid #141416;
+    color: #fff;
+    transition: all .2s ease-in;
+    svg {
+      transition: fill .2s ease;
+    }
+    @include hover {
+      background-color: #fff;
+      color: #141416;
+      svg {
+        fill: #141416;
+      }
+    }
+    &.btn--white {
+      background-color: #fff;
+      color: #141416;
+    }
+  }
+  &--stroke {
+    border: 1px solid #141416;
+    color: #141416;
+    transition: background-color .2s ease-in, color .2s ease-in;
+    @include hover {
+      background-color: #141416;
+      color: #fff;
+    }
+    &.btn--white {
+      border: 2px solid #fff;
+      color: #fff;
+    }
+  }
+
+  &--sort {
+    border: 2.2px solid #141416;
+    color: #141416;
+
+    padding: 17px;
+
+    background-position: 17px, center;
+    background-size: 25px 25px;
+    background-repeat: no-repeat;
+    transition: border-style .2s ease;
+    @include hover {
+      background-color: transparent;
+      color: #141416;
+      border-style: dashed;
+    }
+  }
+  &--category {
+    padding-left: 42px;
+    background-image: url('../img/list.svg');
+  }
+
+  &--collection {
+    padding-left: 42px;
+    background-image: url('../img/voice.svg');
+  }
+  &--price {
+    padding-left: 42px;
+    background-image: url('../img/dollar.svg');
+  }
+}
+.container-left {
+  margin: 0;
+  margin-left: calc((100% - var(--container-width)) / 2);
+}
+
+.preview-block {
+  position: absolute;
+  border-radius: 17px;
+  overflow: hidden;
+  right: -300px;
+  bottom: 20px;
+  width: 320px;
+  height: 320px;
+  transition: opacity .2s ease-in;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+
+.hero__slider .swiper-slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.slider {
+  &__controls {
+    display: inline-block;
+    border-radius: 17px;
+    border-radius: 17.247px;
+    background: #FCFCFD;
+    box-shadow: 0 0 10px #000;
+    &-btn {
+      padding: 21px;
+      position: relative;
+      &:not(:last-child){
+        padding-right: 34px;
+        &::after {
+          content: '';
+          position: absolute;
+          width: 2px;
+          height: 30%;
+          right: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #E6E8EC;
+        }
+
+      }
+    }
+  }
+}
+.title {
+  margin: 0;
+  text-align: center;
+  color: #141416;
+  font-family: "Poppins";
+  font-size: 45.04px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 44.751px; /* 99.357% */
+}
+
+.prev-btn, .history__btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 16px;
+  font-weight: 700;
+  color: #000;
+  width: 36px;
+  height: 36px;
+  border-radius: 100%;
+  background-color: #E6E8EC;
+}

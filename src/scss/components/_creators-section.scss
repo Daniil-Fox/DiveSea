@@ -1,0 +1,190 @@
+.creators-section {
+  padding: 155px 0;
+  background-color: #F9F9F9;
+  &__title {
+    margin-bottom: 130px;
+  }
+  &__cards {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 85px  60px ;
+  }
+}
+.creator-card {
+  padding-bottom: 37px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 25px;
+  overflow: hidden;
+  background: #F2F2F2;
+  box-shadow: 30px 15px 80px 0px rgba(191, 191, 191, 0.60);
+
+  &__top {
+    position: relative;
+    margin-bottom: 70px;
+    width: 100%;
+    min-height: 205px;
+    background-image: url('../img/creator-card-1.png');
+    background-repeat: no-repeat;
+    background-size: 100% 206px;
+    background-position: top left;
+    &--zeno {
+      background-image: url('../img/creator-card-2.png');
+    }
+    &--leon {
+      background-image: url('../img/creator-card-3.png');
+    }
+  }
+  &__avatar {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    width: 120px;
+    height: 120px;
+    border-radius: 100%;
+    overflow: hidden;
+    border: 10px solid #fff;
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+  &__content {
+    padding: 0 28px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  &__name {
+    position: relative;
+    display: inline-block;
+    margin: 0;
+    margin-bottom: 17px;
+    padding-right: 30px;
+    text-align: center;
+    color:  #000;
+    font-family: "Poppins";
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 141%;
+    &::after {
+      content: '';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background-image: url('../img/verify.svg');
+      background-position: center, center;
+      background-size: cover;
+      background-repeat: no-repeat;
+
+      transition: transform .2s ease-in;
+    }
+    @include hover {
+      transform: scale(1.05);
+    }
+  }
+  &__galley {
+
+  }
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 33px;
+  }
+  &__item {
+    &:not(:last-child){
+      margin-right: 37px;
+    }
+  }
+  &__capture {
+    display: block;
+    color: #141416;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 17.793px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 144.444%;
+    &--bid {
+      position: relative;
+      padding-left: 16px;
+      &::after {
+        content: '';
+        width: 13px;
+        height: 18px;
+        position: absolute;
+        left: 0;
+        top: 50%;
+        transform: translateY(-50%);
+        background-image: url('../img/dimond.svg');
+        background-position: center, center;
+        background-size: cover;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+  &__desc {
+    display: block;
+    color: #828282;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 12.85px;
+    line-height: 123%;
+    text-transform: capitalize;
+  }
+}
+.creator-gallery {
+  display: flex;
+  align-items: center;
+  &__item {
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+    width: 100px;
+    height: 100px;
+    &:not(:last-child){
+      margin-right: 10px;
+    }
+
+  }
+  &__link {
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    &--more {
+      position: relative;
+      &::after {
+        content: '55+';
+        position: absolute;
+        inset: 0;
+        z-index: 5;
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #FFF;
+        font-family: "Urbanist";
+        font-size: 20px;
+        font-weight: 700;
+        line-height: 110%;
+        letter-spacing: 0.199px;
+
+        background-color: #00000070;
+      }
+    }
+  }
+  &__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

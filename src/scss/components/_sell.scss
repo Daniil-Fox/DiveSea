@@ -1,0 +1,16 @@
+.sell-section {
+  padding: 155px 210px;
+  background-color: #f9f9f9;
+  &__title {
+    margin-bottom: 120px;
+  }
+  &__container {
+    display: flex;
+    // align-items: center;
+    justify-content: space-between;
+  }
+  &__form {
+    margin-right: 70px;
+    flex-grow: 1;
+  }
+}

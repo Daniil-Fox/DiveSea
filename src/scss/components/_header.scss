@@ -1,0 +1,50 @@
+.header {
+  &__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__left {
+    display: flex;
+    align-items: center;
+  }
+  &__nav {
+    padding: 46px 0;
+  }
+  &__right {
+    display: flex;
+    align-items: center;
+  }
+  &-form {
+    margin-right: 54px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    width: 350px;
+    &__label {
+      width: 100%
+    }
+    &__input {
+      width: 100%;
+      display: block;
+      position: relative;
+      border-radius: 11.526px;
+      padding-left: 50px;
+      padding-right: 10px;
+      height: 57px;
+      border: none;
+      outline: none;
+      background-color: #EDEDED;
+    }
+    &__btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 20px;
+      z-index: 5;
+    }
+  }
+  &__logo {
+    margin-right: 57px;
+  }
+}

@@ -1,0 +1,26 @@
+.nav {
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__item {
+    &:not(:last-child){
+      margin-right: 53px;
+    }
+  }
+  &__link {
+    color: var(--text-color);
+    font-family: "Inter";
+    font-size: 17.829px;
+    font-weight: 500;
+    line-height: 150%;
+    text-transform: uppercase;
+    transition: color .2s ease;
+    @include hover {
+      color: #000;
+    }
+    &.active {
+      color: #000;
+    }
+  }
+}

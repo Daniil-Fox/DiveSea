@@ -1,0 +1,96 @@
+.raiting {
+  position: relative;
+  max-width: 320px;
+  padding: 26px 21px;
+  border-radius: 14px;
+  background-color: #fff;
+  box-shadow: 8.824560165405273px 8.824560165405273px 44.122806549072266px 0px rgba(20, 20, 22, 0.10);
+  &__recent {
+    position: absolute;
+    bottom: -34px;
+    right: 179px;
+    z-index: 3;
+  }
+  &__new-bid {
+    max-width: 325px;
+    width: 100%;
+    position: absolute;
+    top: -27px;
+    left: 188px;
+  }
+  &__list {
+    counter-reset: raiting, 0;
+  }
+  &__item {
+    display: flex;
+    align-items: center;
+    counter-increment: raiting 1;
+    &:not(:last-child){
+      margin-bottom: 15px;
+    }
+  }
+  &__img {
+    width: 48px;
+    height: 48px;
+    border-radius: 100%;
+    position: relative;
+    &::after {
+      content: counter(raiting);
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 100%;
+      background-color: #23262F;
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #FCFCFD;
+      font-family: "Poppins";
+      font-size: 10.448px;
+      font-weight: 600;
+      line-height: 17.413px;
+    }
+  }
+  &__info {
+    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: flex-start;
+  }
+  &__name {
+    color:  #23262F;
+    font-family: "Poppins";
+    font-size: 12.189px;
+    font-weight: 500;
+    line-height: 20.895px; /* 171.429% */
+  }
+  &__acc {
+    color: #777E90;
+    text-align: center;
+    font-family: Poppins;
+    font-size: 10.448px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 17.413px;
+  }
+  &__btn {
+    display: inline-block;
+    margin-left: auto;
+    padding: 7px 13px;
+    color:  #23262F;
+    font-family: "DM Sans";
+    font-size: 12.189px;
+    font-weight: 700;
+    line-height: 13.93px; /* 114.286% */
+
+    border-radius: 6.965px;
+    border: 1.741px solid  #E6E8EC;
+    &-active {
+      background-color: #E6E8EC;
+    }
+  }
+}

@@ -1,0 +1,40 @@
+.join {
+  min-height: 1061px;
+  margin-top: 220px;
+  margin-bottom: 130px;
+  padding-top: 371px;
+  background-image: url('../img/join.png');
+  background-position: center, center;
+  background-size: contain;
+  background-repeat: no-repeat;
+  &__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    color: #18181B;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 45px;
+    font-weight: 700;
+    line-height: 54.4px; /* 120.889% */
+    text-transform: capitalize;
+    max-width: 280px;
+    span {
+      color: #C5C5C5;
+    }
+  }
+  &__desc {
+    color: #12141D;
+    text-align: center;
+    font-family: "Poppins";
+    font-size: 18px;
+    line-height: 32px;
+    max-width: 600px;
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,55 @@
+.cta {
+  padding-top: 118px;
+  padding-bottom: 160px;
+  &__block {
+    padding-left: 66px;
+    padding-top: 31px;
+    padding-right: 31px;
+    padding-bottom: 31px;
+    width: 100%;
+    background-color: #141416;
+    border-radius: 30px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 12px;
+    color: #fff;
+    font-family: "Poppins";
+    font-size: 45px;
+    font-weight: 600;
+    line-height: 130%;
+    letter-spacing: 0.45px;
+  }
+  &__desc {
+    margin: 0;
+    margin-bottom: 50px;
+    color: #D4D4D4;
+    font-family: "Poppins";
+    font-size: 20.265px;
+    font-weight: 500;
+    line-height: 130%; /* 26.345px */
+    letter-spacing: 0.203px;
+  }
+  &__btn {
+    &:not(:last-child){
+      margin-right: 30px;
+    }
+  }
+  &__img {
+    width: 370px;
+    height: 280px;
+    border-radius: 15.793px;
+    overflow: hidden;
+    // background: url('../img/cta-img.jpg'), lightgray / 50% cover no-repeat;
+    box-shadow: 0 10px 50px lightgray;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}

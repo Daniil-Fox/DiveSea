@@ -1,0 +1,100 @@
+.recent-viewed {
+  width: 365px;
+  padding: 26px 24px;
+  background-color: #fff;
+  border-radius: 14.119px;
+  border: 0.882px solid var(--greyscale-200, #EDF2F7);
+  background: var(--others-white, #FFF);
+  box-shadow: 8.824560165405273px 8.824560165405273px 44.122806549072266px 0px rgba(20, 20, 22, 0.10);
+  &__recent {
+    position: absolute;
+    bottom: 0;
+    right: 100px;
+    transform: translateY(50%);
+    z-index: 10;
+  }
+  &__title {
+    margin: 0;
+    margin-bottom: 27px;
+    color: #1A202C;
+    font-family: "Poppins";
+    font-size: 21px;
+    font-weight: 600;
+    line-height: 135%;
+    letter-spacing: 0.2px;
+  }
+  &__list {
+    counter-reset: recents 0;
+  }
+  &__item {
+    counter-increment: recents 1;
+    display: flex;
+    align-items: center;
+    &:not(:last-child){
+      margin-bottom: 20px;
+    }
+  }
+  &__img {
+    width: 44px;
+    height: 44px;
+    position: relative;
+    img {
+      border-radius: 100%;
+    }
+    &::after {
+      content: counter(recents);
+      border-radius: 100%;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 21px;
+      height: 21px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      background-color: #fff;
+      color: #141416;
+      font-family: "Poppins";
+      font-size: 11.523px;
+      font-weight: 700;
+      line-height: 150%;
+      letter-spacing: 0.096px;
+    }
+  }
+  &__content {
+    flex-grow: 1;
+    margin-left: 20px;
+  }
+  &__row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    &:not(:last-child){
+      margin-bottom: 7px;
+    }
+  }
+  &__name {
+    color: #141416;
+    font-family: "Poppins";
+    font-size: 15.364px;
+    font-weight: 500;
+    line-height: 140%;
+  }
+  &__pseudo {
+    color: #64748B;
+    font-family: "Poppins";
+    font-size: 12.483px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+  &__percent {
+    color: #10C352;
+    font-family: "Poppins";
+    font-size: 13.443px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 150%;
+  }
+}
