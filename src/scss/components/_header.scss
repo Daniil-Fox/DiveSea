@@ -21,6 +21,9 @@
     align-items: center;
     position: relative;
     width: 350px;
+    @include for-desktop {
+     margin-right: 10px;
+    }
     &__label {
       width: 100%
     }
@@ -43,8 +46,12 @@
       left: 20px;
       z-index: 5;
     }
+
   }
   &__logo {
     margin-right: 57px;
+    @include for-desktop {
+      margin-right: 20px;
+    }
   }
 }

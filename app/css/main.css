@@ -359,7 +359,13 @@ a {
 
 .container-left {
   margin: 0;
-  margin-left: calc((100% - var(--container-width)) / 2);
+  margin-left: calc((100% - var(--container-width) - 15px) / 2);
+  padding: 15px;
+}
+@media (max-width: 1250px) {
+  .container-left {
+    margin: 0 auto;
+  }
 }
 
 .preview-block {
@@ -378,6 +384,11 @@ a {
   height: 100%;
   -o-object-fit: cover;
   object-fit: cover;
+}
+@media (max-width: 1250px) {
+  .preview-block {
+    display: none;
+  }
 }
 
 .hero__slider .swiper-slide img {
@@ -486,6 +497,11 @@ a {
   position: relative;
   width: 350px;
 }
+@media (max-width: 1250px) {
+  .header-form {
+    margin-right: 10px;
+  }
+}
 .header-form__label {
   width: 100%;
 }
@@ -513,6 +529,11 @@ a {
 .header__logo {
   margin-right: 57px;
 }
+@media (max-width: 1250px) {
+  .header__logo {
+    margin-right: 20px;
+  }
+}
 
 .nav__list {
   display: -webkit-box;
@@ -524,6 +545,11 @@ a {
 }
 .nav__item:not(:last-child) {
   margin-right: 53px;
+}
+@media (max-width: 1250px) {
+  .nav__item:not(:last-child) {
+    margin-right: 20px;
+  }
 }
 .nav__link {
   color: var(--text-color);
@@ -719,6 +745,7 @@ a {
   position: relative;
   padding-top: 75px;
   padding-bottom: 60px;
+  background-color: #f1f1f1;
 }
 .hero::after {
   content: "";
@@ -744,13 +771,24 @@ a {
   -ms-grid-column-span: 5;
   grid-column: 5 span;
 }
+@media (max-width: 1250px) {
+  .hero__content {
+    -ms-grid-column-span: 6;
+    grid-column: 6 span;
+  }
+}
 .hero__slider-block {
   position: relative;
   -ms-grid-column-span: 5;
   grid-column: 5 span;
   width: 100%;
-  padding-left: 84px;
   text-align: center;
+}
+@media (max-width: 1250px) {
+  .hero__slider-block {
+    -ms-grid-column-span: 6;
+    grid-column: 6 span;
+  }
 }
 .hero__slider {
   width: 390px;
@@ -842,6 +880,11 @@ a {
   background-position: center, center;
   background-size: cover;
   background-repeat: no-repeat;
+}
+@media (max-width: 1250px) {
+  #hero-slider::before {
+    display: none;
+  }
 }
 
 .card {
@@ -1135,6 +1178,11 @@ a {
   transform: translateY(50%);
   z-index: 10;
 }
+@media (max-width: 1250px) {
+  .weekly__recent {
+    right: 40px;
+  }
+}
 
 .collection {
   padding-top: 236px;
@@ -1299,10 +1347,18 @@ a {
   gap: 60px 40px;
   margin-bottom: 100px;
 }
-
+@media (max-width: 1250px) {
+  .marketplace__items {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
 .benefits {
   padding-top: 113px;
   padding-bottom: 100px;
+  background-color: #f1f1f1;
 }
 .benefits__container {
   display: -ms-grid;

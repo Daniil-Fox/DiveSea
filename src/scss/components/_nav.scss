@@ -6,6 +6,9 @@
   &__item {
     &:not(:last-child){
       margin-right: 53px;
+      @include for-desktop {
+        margin-right: 20px;
+      }
     }
   }
   &__link {

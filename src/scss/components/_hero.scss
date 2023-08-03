@@ -25,14 +25,18 @@
   }
   &__content {
     grid-column: 5 span;
+    @include for-desktop {
+      grid-column: 6 span;
+    }
   }
   &__slider-block {
     position: relative;
     grid-column: 5 span;
     width: 100%;
-    padding-left: 84px;
     text-align: center;
-
+    @include for-desktop {
+      grid-column: 6 span;
+    }
   }
   &__slider {
     width: 390px;
@@ -120,5 +124,11 @@
     background-position: center, center;
     background-size: cover;
     background-repeat: no-repeat;
+  }
+
+  @include for-desktop {
+    &::before {
+      display: none;
+    }
   }
 }

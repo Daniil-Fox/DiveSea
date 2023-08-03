@@ -195,7 +195,11 @@ a {
 }
 .container-left {
   margin: 0;
-  margin-left: calc((100% - var(--container-width)) / 2);
+  margin-left: calc((100% - var(--container-width) - 15px) / 2);
+  padding: 15px;
+  @include for-desktop {
+    margin: 0 auto;
+  }
 }
 
 .preview-block {
@@ -212,6 +216,9 @@ a {
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+  @include for-desktop {
+    display: none;
   }
 }
 

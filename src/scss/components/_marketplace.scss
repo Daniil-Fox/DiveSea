@@ -31,5 +31,13 @@
     grid-template-columns: repeat(4, 1fr);
     gap: 60px 40px;
     margin-bottom: 100px;
+    @include for-desktop {
+      grid-template-columns: repeat(auto-fit, minmax(250px, 300px));
+      justify-content: center;
+    }
+  }
+  &__item {
+    @include for-desktop {
+    }
   }
 }
